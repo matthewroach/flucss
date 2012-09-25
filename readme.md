@@ -1,5 +1,5 @@
 
-# Flux
+# Flucss
 
 Some basic OOCSS that are easily extendable.
 
