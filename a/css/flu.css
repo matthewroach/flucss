@@ -1,524 +1,355 @@
-/*
-		Flux ::: A base CSS framework, that is easily extendable
-	______________________________________________________________________________________________________________
-
-		:: Requires Reset.css
-
-
-
-		Structure of Flux.css
-	______________________________________________________________________________________________________________
-
-		0. Basics
-		1. The Grid
-		2. Navigation
-		3. Media
-		4. Forms
-		5. Buttons
-		6. Tables
-		7. Content
-			1- Headings
-			2- Paragraphs
-			3- Lists 
-				- ul
-				- ol
-				- dl
-			4- Links
-			5- Blockquotes
-			6- Text
-			7- Icons
-		8. Generals
-
-*/
-
-/*
-		0. Basics
-	______________________________________________________________________________________________________________
-	
-		Just the basics which do not not below in reset.css, and are used to set up Flux.css
-
-*/
-
-body { 	
-	font-family: Helvetica, Arial, sans-serif;
-	margin: 0 auto;
-	text-align: center;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+embed, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
+body {
+  line-height: 1;
+}
 
-/*
-		1. The Grid
-	______________________________________________________________________________________________________________
+blockquote, q {
+  quotes: none;
+}
 
-	Work on an 1000px gird with 10 columns - Nice easy maths ;)
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
 
-	Base 	= 80px col with 5px left and right margin and padding left right 0.5%
-			= 8% with margin 0 0.5%; & padding: 0.5%;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-	Basic Markup :::
-		<div class="row">
-			<div class="col#"> </div>
-			<div class="col#"> </div>
-		</div>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-	The col# inside a row div can not be more than 10 if you add them all up!
+html {
+  font-size: 100%;
+}
 
-*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+  margin-right: 0.5% !important;
+}
 
 .container {
-	/*margin: 0 auto;*/
-	text-align: left;
-	width: 100%;
-	max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
 }
 
-	.row {
-		display: inline-block;
-		margin: 1.5% 0 0 0;
-		width: 100%;
-	}
-		.row:first-child {
-			margin: 0;
-		}
+.row {
+  display: inline-block;
+  margin: 1.5% 0 0 0;
+  padding: 0.5%;
+  width: 100%;
+}
+.row > [class^=col] {
+  float: left;
+  margin: 0 0 0 0.5%;
+  padding: 0.5%;
+}
+.row > [class^=col]:first-of-type {
+  margin: 0;
+}
 
-	.colcenter {
-		margin: 0 auto;
-	}
-	
-	.col1, .col2, .colqr, .col3, .col3rd, .col4, .col5, .col6, .col7, .col8, .col9, .col10 {
-		float: left;
-		margin: 0 0.5%;
-		padding: 0.5%;
-	}
+.colcenter {
+  margin: 0 auto;
+}
 
-	.col1 {
-		width: 8%;
-	}
+.col1 {
+  width: 9.5%;
+}
 
-	.col2 {
-		width: 18%;
-	}
+.col2 {
+  width: 19.5%;
+}
 
-	.colqr {
-		width: 23%;
-	}
+.col3 {
+  width: 29.5%;
+}
 
-	.col3 {
-		width: 28%;
-	}
+.col4 {
+  width: 39.5%;
+}
 
-	.col3rd {
-		width: 31.333333333%;
-	}
+.col5 {
+  width: 49.5%;
+}
 
-	.col4 {
-		width: 38%;
-	}
+.col6 {
+  width: 59.5%;
+}
 
-	.col5 {
-		width: 48%;
-	}
+.col7 {
+  width: 69.5%;
+}
 
-	.col6 {
-		width: 58%;
-	}
+.col8 {
+  width: 79.5%;
+}
 
-	.col7 {
-		width: 68%;
-	}
+.col9 {
+  width: 89.5%;
+}
 
-	.col8 {
-		width: 78%;
-	}
+.col10 {
+  width: 99.5%;
+}
 
-	.col9 {
-		width: 88%;
-	}
+.col3rd {
+  width: 32.83333%;
+}
 
-	.col10 {
-		width: 98%;
-	}
-
-
-/*
-		2. Navigation
-	______________________________________________________________________________________________________________
-
-		- Default
-
-*/
-
+.colqr {
+  width: 24.5%;
+}
 
 .nav {
-	display: inline-block;
-	list-style: none;
-	width: 100%;
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+}
+.nav li {
+  display: inline-block;
 }
 
-	.nav li {
-		display: inline-block;
-	}
-
-	/*
-
-		Extends .nav -> use <ul class="nav vertical">
-
-	*/
-
-	.vertical li {
-		display: list-item;
-	}
-
-
-/*
-		3. Media
-	______________________________________________________________________________________________________________
-	
-
-*/
+.vertical li {
+  display: list-item;
+}
 
 img {
-	color: rgb(200,0,0);
-	display: block;
-	font-style: italic;
+  color: #c80000;
+  display: block;
+  font-style: italic;
 }
 
 .media {
-	display: inline-block;
-	/*margin: 2% 0;*/
+  display: inline-block;
+  margin: 1% 0;
 }
-
-	.media .img {
-		float: left;
-		margin-right: 2%;
-	}
-
-	.media .right {
-		margin-left: 2%;
-	}
-
-
-
-/*
-		4. Forms
-	______________________________________________________________________________________________________________
-
-
-		Very Basic as each site's forms can be very different, and we would have to override styles that would 
-		be here and that goes against Flucss.	
-
-*/
+.media .left {
+  margin-right: 2%;
+}
+.media .right {
+  margin-left: 2%;
+}
 
 form fieldset {
-	display: inline-block;
+  display: inline-block;
 }
-
-	label {
-		float: left;
-		margin: 0 2% 0 0;
-	}
-
-	.sidelabels label {
-		display: block;
-	}
-
-
-	.full {
-		display: inline-block;
-		width: 98%;
-	}
-
-	.half {
-		width: 50%;
-	}
-
-
-
-/*
-		5. Buttons
-	______________________________________________________________________________________________________________
-	
-
-*/
-
-
-
-/*
-		6. Tables
-	______________________________________________________________________________________________________________
-	
-
-*/
+form label {
+  float: left;
+  margin: 0 2% 0 0;
+}
+form .sidelabels label {
+  display: block;
+}
+form .full {
+  display: inline-block;
+  width: 98%;
+}
+form .half {
+  width: 50%;
+}
 
 table {
-	width: 100%;
+  width: 100%;
+}
+table th {
+  font-weight: bold;
+}
+table .zebra tbody tr:nth-child(odd) {
+  background: #e6e6e6;
 }
 
-	th {
-		font-weight: bold;
-	}
-
-		.zebra tbody tr:nth-child(odd) { 
-			background: rgb(230,230,230);
-		}
-
-
-/*
-	This is a duplication of the Grid as we can only define widths for tables 
-
-*/
 .t1 {
-	width: 8%;
+  width: 10%;
 }
 
 .t2 {
-	width: 18%;
-}
-
-.tqr {
-	width: 23%;
+  width: 20%;
 }
 
 .t3 {
-	width: 28%;
-}
-
-.t3rd {
-	width: 31.333333333%;
+  width: 30%;
 }
 
 .t4 {
-	width: 38%;
+  width: 40%;
 }
 
 .t5 {
-	width: 48%;
+  width: 50%;
 }
 
 .t6 {
-	width: 58%;
+  width: 60%;
 }
 
 .t7 {
-	width: 68%;
+  width: 70%;
 }
 
 .t8 {
-	width: 78%;
+  width: 80%;
 }
 
 .t9 {
-	width: 88%;
+  width: 90%;
 }
 
-
-
-/*
-		7. Content
-	______________________________________________________________________________________________________________
-
-		1- Headings
-		2- Paragraphs
-		3- Lists 
-			- ul
-			- ol
-			- dl
-		4- Links
-		5- Blockquotes	
-		6- Text
-
-*/
-
-/* 
-
-	Content Basics 
-
-*/
-h1, h2, h3, h4, h5, h6, p, li, dl, 
-.gigawatt, .megawatt, .kilowatt, .milliwatt, .microwatt, .nanowatt {
-	line-height: 1.2;
+.t10 {
+  width: 100%;
 }
 
+.t3rd {
+  width: 33.33333%;
+}
 
-/*
-		7.1. Headings
-	______________________________________________________________________________________________________________
+.tqr {
+  width: 25%;
+}
 
-*/
+h1, h2, h3, h4, h5, h6, p, li, dl, blockquote, th, td, form {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
 h1, .gigawatt {
-	font-size: 2.2em;
-	font-weight: 900;
+  font-size: 2.2rem;
+  font-weight: 900;
 }
 
 h2, .megawatt {
-	font-size: 1.8em;
-	font-weight: 800;
+  font-size: 1.8rem;
+  font-weight: 800;
 }
 
 h3, .kilowatt {
-	font-size: 1.6em;
-	font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 h4, .milliwatt {
-	font-size: 1.4em;
-	font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 h5, .microwatt {
-	font-size: 1.2em;
-	font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 h6, .nanowatt {
-	font-size: 1.1em;
-	font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .h-header {
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	margin: 0 0 0.5em 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin: 0 0 0.5em 0;
 }
-
-
-/*
-		7.2. Paragrpahs
-	______________________________________________________________________________________________________________
-	
-*/
 
 p {
-	margin: 0 0 0.5em 0;
+  margin: 0 0 0.5em 0;
 }
-
-/*
-		7.3. Lists
-	______________________________________________________________________________________________________________
-	
-*/
 
 ol li {
-	margin: 0 0 0 25px;
+  margin: 0 0 0 25px;
 }
 
-	.nolistitems li {
-		list-style: none;
-		margin: 0;
-	}
+.nolistitems li {
+  list-style: none;
+  margin: 0;
+}
 
-	.disc li {
-		list-style: disc;
-	}
+.disc li {
+  list-style: disc;
+}
 
-	.square li {
-		list-style: square;
-	}
+.square li {
+  list-style: square;
+}
 
-	.circle li {
-		list-style: circle;
-	}
+.circle li {
+  list-style: circle;
+}
 
-	.leadingzero li {
-		list-style: decimal-leading-zero;
-	}
+.leadingzero li {
+  list-style: decimal-leading-zero;
+}
 
-	.roman li {
-		list-style: lower-roman;
-	}
-
-
-/*
-		7.4. Links
-	______________________________________________________________________________________________________________
-	
-*/
-
-
-
-/*
-		7.5. Blockquotes
-	______________________________________________________________________________________________________________
-	
-*/
-
+.roman li {
+  list-style: lower-roman;
+}
 
 blockquote {
-	margin: 1% 0 2% 5%;
-	padding: 1%;
-	width: 85%;
+  margin: 1% 0 2% 5%;
+  padding: 1%;
+  width: 85%;
 }
-
-	blockquote cite {
-		display: inline-block;
-		margin: 1% 0 0 0;
-	}
-
-
-
-/*
-		7.6. Text
-	______________________________________________________________________________________________________________
-	
-*/
+blockquote cite {
+  display: inline-block;
+  margin: 1% 0 0 0;
+}
 
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 
-sup {
-	font-size: 0.8em;
-	vertical-align: super;
-}
-
+sup,
 sub {
-	font-size: 0.8em;
-	vertical-align: sub;
+  font-size: 0.8rem;
 }
 
 .center {
-	text-align: center;
+  text-align: center;
 }
 
 abbr {
-	border-bottom: 1px dotted rgb(50,50,50);
+  border-bottom: 1px dotted #323232;
 }
-
-	abbr:hover {
-		cursor: help;
-	}
-
-
-
-/*
-		7.7. Icons
-	______________________________________________________________________________________________________________
-	
-	Icons that can be used within Navigation elements, or within text elements
-
-	They can either be sprites (.is) or just a normal icon (.i)
-	
-*/
-
+abbr:hover {
+  cursor: help;
+}
 
 .i, .is {
-	background-repeat: no-repeat;
-	display: inline-block;
-	margin: 0 0.5%;
-	position: relative;
-	vertical-align: middle;
-}
-
-
-/*
-		8. Generals
-	______________________________________________________________________________________________________________
-	
-
-*/
-
-
-.right {
-	float: right;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 0 0.5%;
+  position: relative;
+  vertical-align: middle;
 }

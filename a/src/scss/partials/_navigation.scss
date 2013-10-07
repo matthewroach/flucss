@@ -1,0 +1,26 @@
+//
+//		Navigation
+//	______________________________________________________________________________________________________________
+//
+//		- Default
+//
+
+
+.nav {
+	display: inline-block;
+	list-style: none;
+	width: 100%;
+
+	li {
+		display: inline-block;
+	}
+
+}
+
+
+
+//	Extends .nav -> use <ul class="nav vertical">
+
+.vertical li {
+	display: list-item;
+}

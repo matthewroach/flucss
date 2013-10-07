@@ -1,0 +1,184 @@
+//
+//		Content
+//	______________________________________________________________________________________________________________
+//
+//		1- Headings
+//		2- Paragraphs
+//		3- Lists
+//			- ul
+//			- ol
+//			- dl
+//		4- Links
+//		5- Blockquotes
+//		6- Text
+
+
+//	Content Basics
+
+h1, h2, h3, h4, h5, h6, p, li, dl, blockquote, th, td, form {
+	font-size: 1rem;
+	line-height: 1.2;
+}
+
+
+//
+//		1. Headings
+//	______________________________________________________________________________________________________________
+
+h1, .gigawatt {
+	font-size: 2.2rem;
+	font-weight: 900;
+}
+
+h2, .megawatt {
+	font-size: 1.8rem;
+	font-weight: 800;
+}
+
+h3, .kilowatt {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+h4, .milliwatt {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+h5, .microwatt {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+h6, .nanowatt {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+.h-header {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin: 0 0 0.5em 0;
+}
+
+
+
+//
+//		2. Paragrpahs
+//	______________________________________________________________________________________________________________
+
+
+p {
+	margin: 0 0 0.5em 0;
+}
+
+
+
+//
+//		3. Lists
+//	______________________________________________________________________________________________________________
+
+
+ol li {
+	margin: 0 0 0 25px;
+}
+
+	.nolistitems li {
+		list-style: none;
+		margin: 0;
+	}
+
+	.disc li {
+		list-style: disc;
+	}
+
+	.square li {
+		list-style: square;
+	}
+
+	.circle li {
+		list-style: circle;
+	}
+
+	.leadingzero li {
+		list-style: decimal-leading-zero;
+	}
+
+	.roman li {
+		list-style: lower-roman;
+	}
+
+
+
+//
+//		4. Links
+//	______________________________________________________________________________________________________________
+
+
+
+
+//
+//		5. Blockquotes
+//	______________________________________________________________________________________________________________
+
+
+blockquote {
+	margin: 1% 0 2% 5%;
+	padding: 1%;
+	width: 85%;
+
+	cite {
+		display: inline-block;
+		margin: 1% 0 0 0;
+	}
+
+}
+
+
+
+//
+//	6. Text
+//	______________________________________________________________________________________________________________
+
+
+strong {
+	font-weight: bold;
+}
+
+sup,
+sub {
+	font-size: 0.8rem;
+}
+
+.center {
+	text-align: center;
+}
+
+abbr {
+	border-bottom: 1px dotted rgb(50,50,50);
+
+	&:hover {
+		cursor: help;
+	}
+
+}
+
+
+
+//
+//		7. Icons
+//	______________________________________________________________________________________________________________
+//
+//	Icons that can be used within Navigation elements, or within text elements
+//
+//	They can either be sprites (.is) or just a normal icon (.i)
+//
+
+
+.i, .is {
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 0 0.5%;
+	position: relative;
+	vertical-align: middle;
+}
