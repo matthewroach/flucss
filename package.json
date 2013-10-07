@@ -1,0 +1,17 @@
+{
+  "name": "flucss",
+  "description": "Flucss - My little CSS framework",
+  "version": "0.1.0",
+  "author": {
+    "name": "Matthew Roach",
+    "email": "matthew@matthewroach.me",
+    "url": "www.matthewroach.me"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-sass": "~0.3.0"
+  }
+}
