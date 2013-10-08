@@ -22,29 +22,47 @@
 
 	// --- Grid Builder --- */
 
-	@mixin gridBuilder( $colName:$columnName, $left:0.5 ) {
+	@mixin gridBuilder( $colName:$columnName, $left:$colLeft ) {
 
 		$x: ( $gridWidth / $gridNo );
+		$ml : $left / $gridWidth;
 
 		@for $i from 1 through $gridNo {
 
 			$w: ( $x * $i / $gridWidth );
+			$l: ( $left * $i / $gridWidth );
 
 			.#{$colName}#{$i} {
-				width: percentage( $w ) - $left;
+				@if $i == 1 {
+					width: percentage( $w - $l );
+				} @else {
+					width: percentage( $w - $ml );
+				}
 			}
 
 		}
 
 		.#{$colName}3rd {
 			$w: ( $gridWidth / 3 / $gridWidth );
-			width : percentage( $w ) - $left;
+			$l: ( $left * 3 / $gridWidth );
+
+			width : percentage( $w - $l );
 		}
 
 		.#{$colName}qr {
 			$w: ( $gridWidth / 4 / $gridWidth );
-			width : percentage( $w ) - $left;
+			$l: ( $left * 4 / $gridWidth );
+
+			width : percentage( $w );
 		}
 
 	}
 
+
+
+	// --- Font Size --- */
+
+	@mixin fontSize( $size:$baseSize ) {
+		font-size: ($size * 10 ) + px;
+		font-size: $size + rem;
+	}

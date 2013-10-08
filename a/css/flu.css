@@ -17,10 +17,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-body {
-  line-height: 1;
-}
-
 blockquote, q {
   quotes: none;
 }
@@ -43,7 +39,7 @@ table {
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -66,19 +62,17 @@ body {
   margin: 0 auto;
   text-align: left;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .row {
   display: inline-block;
   margin: 1.5% 0 0 0;
-  padding: 0.5%;
   width: 100%;
 }
 .row > [class^=col] {
   float: left;
-  margin: 0 0 0 0.5%;
-  padding: 0.5%;
+  margin: 0 0 0 3%;
 }
 .row > [class^=col]:first-of-type {
   margin: 0;
@@ -89,51 +83,51 @@ body {
 }
 
 .col1 {
-  width: 9.5%;
+  width: 7.0%;
 }
 
 .col2 {
-  width: 19.5%;
+  width: 17%;
 }
 
 .col3 {
-  width: 29.5%;
+  width: 27%;
 }
 
 .col4 {
-  width: 39.5%;
+  width: 37%;
 }
 
 .col5 {
-  width: 49.5%;
+  width: 47%;
 }
 
 .col6 {
-  width: 59.5%;
+  width: 57.0%;
 }
 
 .col7 {
-  width: 69.5%;
+  width: 67%;
 }
 
 .col8 {
-  width: 79.5%;
+  width: 77%;
 }
 
 .col9 {
-  width: 89.5%;
+  width: 87%;
 }
 
 .col10 {
-  width: 99.5%;
+  width: 97%;
 }
 
 .col3rd {
-  width: 32.83333%;
+  width: 24.33333%;
 }
 
 .colqr {
-  width: 24.5%;
+  width: 25%;
 }
 
 .nav {
@@ -243,37 +237,43 @@ table .zebra tbody tr:nth-child(odd) {
 }
 
 h1, h2, h3, h4, h5, h6, p, li, dl, blockquote, th, td, form {
-  font-size: 1rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.2;
 }
 
 h1, .gigawatt {
+  font-size: 22px;
   font-size: 2.2rem;
   font-weight: 900;
 }
 
 h2, .megawatt {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 20px;
+  font-size: 2rem;
 }
 
 h3, .kilowatt {
-  font-size: 1.6rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
 h4, .milliwatt {
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 h5, .microwatt {
-  font-size: 1.2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 
 h6, .nanowatt {
-  font-size: 1.1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
