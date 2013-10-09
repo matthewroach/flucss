@@ -30,14 +30,9 @@
 		@for $i from 1 through $gridNo {
 
 			$w: ( $x * $i / $gridWidth );
-			$l: ( $left * $i / $gridWidth );
 
 			.#{$colName}#{$i} {
-				@if $i == 1 {
-					width: percentage( $w - $l );
-				} @else {
-					width: percentage( $w - $ml );
-				}
+				width: percentage( $w - $ml );
 			}
 
 		}
@@ -46,7 +41,7 @@
 			$w: ( $gridWidth / 3 / $gridWidth );
 			$l: ( $left * 3 / $gridWidth );
 
-			width : percentage( $w - $l );
+			width : percentage( $w );
 		}
 
 		.#{$colName}qr {
@@ -57,7 +52,6 @@
 		}
 
 	}
-
 
 
 	// --- Font Size --- */

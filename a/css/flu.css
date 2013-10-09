@@ -59,10 +59,11 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 6em auto;
+  padding: 0 2% 0 0;
   text-align: left;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1040px;
 }
 
 .row {
@@ -73,9 +74,6 @@ body {
 .row > [class^=col] {
   float: left;
   margin: 0 0 0 2%;
-}
-.row > [class^=col]:first-of-type {
-  margin: 0;
 }
 
 .colcenter {
@@ -123,7 +121,7 @@ body {
 }
 
 .col3rd {
-  width: 27.33333%;
+  width: 33.33333%;
 }
 
 .colqr {

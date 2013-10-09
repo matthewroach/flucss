@@ -16,10 +16,12 @@
 
 
 .container {
-	margin: 0 auto;
+	margin: 6em auto;
+	padding: 0 percentage($colLeft / $gridWidth) 0 0;
 	text-align: left;
 	width: 100%;
-	max-width: #{$gridWidth}px;
+	max-width: #{$gridWidth+$colLeft+$colLeft}px;
+
 }
 
 	.row {
@@ -30,10 +32,6 @@
 		& > [class^=col] {
 			float: left;
 			margin: 0 0 0 percentage( $colLeft / $gridWidth );
-
-			&:first-of-type {
-				margin: 0;
-			}
 		}
 	}
 
@@ -44,4 +42,3 @@
 
 
 	@include gridBuilder;
-
