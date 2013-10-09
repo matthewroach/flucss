@@ -41,14 +41,14 @@
 			$w: ( $gridWidth / 3 / $gridWidth );
 			$l: ( $left * 3 / $gridWidth );
 
-			width : percentage( $w );
+			width : percentage( $w - $ml );
 		}
 
 		.#{$colName}qr {
 			$w: ( $gridWidth / 4 / $gridWidth );
 			$l: ( $left * 4 / $gridWidth );
 
-			width : percentage( $w );
+			width : percentage( $w - $ml );
 		}
 
 	}
