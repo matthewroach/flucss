@@ -1,19 +1,4 @@
 
-	// --- Load My Base Settings --- */
-	@import "flucss/settings"
+@import "flucss/_flucss";
 
-
-	// --- Load my mixins --- */
-				, "mixins/mixins"
-
-
-	// --- Import all the SCSS files together in the correct order --- */
-				, "partials/reset"
-				, "partials/basics"
-				, "partials/grid"
-				, "partials/navigation"
-				, "partials/media"
-				, "partials/forms"
-				, "partials/buttons"
-				, "partials/tables"
-				, "partials/content"
+// --- Start adding your CSS below --- */
