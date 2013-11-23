@@ -16,7 +16,7 @@
 
 
 .container {
-	margin: 6em auto;
+	margin: 0 auto;
 	padding: 0 percentage($colLeft / $gridWidth) 0 0;
 	text-align: left;
 	width: 100%;
@@ -26,7 +26,7 @@
 
 	.row {
 		display: inline-block;
-		margin: 1.5% 0 0 0;
+		margin: 0 0 1.5% 0;
 		width: 100%;
 
 		& > [class^=col] {
