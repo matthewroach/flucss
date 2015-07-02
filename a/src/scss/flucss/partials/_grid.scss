@@ -1,8 +1,9 @@
 //
 //		The Grid
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 //
-//	Grid is built using the gridBuilder mixin, the width and columns are setting in settings.scss
+//	Grid is built using the gridBuilder mixin, the width and columns are setting
+// 	in settings.scss
 //
 //
 //	Basic Markup :::
@@ -11,13 +12,14 @@
 //			<div class="col#"> </div>
 //		</div>
 //
-//	The col# inside a row div can not be more than the numbeer your set $girdNo to if you add them all up!
+//	The col# inside a row div can not be more than the numbeer your set $girdNo to
+// 	if you add them all up!
 //
 
 
 .container {
 	margin: 0 auto;
-	padding: 0 percentage($colLeft / $gridWidth) 0 0;
+	padding: 0 percentage( $colLeft / $gridWidth ) 0 0;
 	text-align: left;
 	width: 100%;
 	max-width: #{$gridWidth+$colLeft+$colLeft}px;
@@ -29,7 +31,7 @@
 		margin: 0 0 1.5% 0;
 		width: 100%;
 
-		& > [class^=col] {
+		& > [class^=#{$columnName}] {
 			float: left;
 			margin: 0 0 0 percentage( $colLeft / $gridWidth );
 		}

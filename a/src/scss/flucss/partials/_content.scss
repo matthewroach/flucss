@@ -1,6 +1,6 @@
 //
 //		Content
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 //
 //		1- Headings
 //		2- Paragraphs
@@ -11,6 +11,7 @@
 //		4- Links
 //		5- Blockquotes
 //		6- Text
+//
 
 
 //	Content Basics
@@ -23,33 +24,39 @@ h1, h2, h3, h4, h5, h6, p, li, dl, blockquote, th, td, form {
 
 //
 //		1. Headings
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 
-h1, .gigawatt {
+h1,
+.gigawatt {
 	@include fontSize(2.2);
 	font-weight: 900;
 }
 
-h2, .megawatt {
+h2,
+.megawatt {
 	@include fontSize(2.0);
 }
 
-h3, .kilowatt {
+h3,
+.kilowatt {
 	@include fontSize(1.8);
 	font-weight: 700;
 }
 
-h4, .milliwatt {
+h4,
+.milliwatt {
 	@include fontSize(1.6);
 	font-weight: 700;
 }
 
-h5, .microwatt {
+h5,
+.microwatt {
 	@include fontSize(1.4);
 	font-weight: 700;
 }
 
-h6, .nanowatt {
+h6,
+.nanowatt {
 	@include fontSize(1.2);
 	font-weight: 700;
 }
@@ -64,7 +71,7 @@ h6, .nanowatt {
 
 //
 //		2. Paragrpahs
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 
 
 p {
@@ -75,50 +82,56 @@ p {
 
 //
 //		3. Lists
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 
 
 ol li {
 	margin: 0 0 0 25px;
 }
 
-	.nolistitems li {
-		list-style: none;
-		margin: 0;
-	}
+.nolistitems li {
+	list-style: none;
+	margin: 0;
+}
 
-	.disc li {
-		list-style: disc;
-	}
+.disc li {
+	list-style: disc;
+}
 
-	.square li {
-		list-style: square;
-	}
+.square li {
+	list-style: square;
+}
 
-	.circle li {
-		list-style: circle;
-	}
+.circle li {
+	list-style: circle;
+}
 
-	.leadingzero li {
-		list-style: decimal-leading-zero;
-	}
+.leadingzero li {
+	list-style: decimal-leading-zero;
+}
 
-	.roman li {
-		list-style: lower-roman;
-	}
+.roman li {
+	list-style: lower-roman;
+}
 
 
 
 //
 //		4. Links
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 
+a {
+
+	&:hover {
+		cursor: pointer;
+	}
+}
 
 
 
 //
 //		5. Blockquotes
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 
 
 blockquote {
@@ -130,14 +143,13 @@ blockquote {
 		display: inline-block;
 		margin: 1% 0 0 0;
 	}
-
 }
 
 
 
 //
 //	6. Text
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 
 
 strong {
@@ -146,7 +158,7 @@ strong {
 
 sup,
 sub {
-	font-size: 0.8rem;
+	@include fontSize(0.8);
 }
 
 .center {
@@ -154,7 +166,7 @@ sub {
 }
 
 abbr {
-	border-bottom: 1px dotted rgb(50,50,50);
+	border-bottom: 1px dotted rgb(50, 50, 50);
 
 	&:hover {
 		cursor: help;
@@ -166,7 +178,7 @@ abbr {
 
 //
 //		7. Icons
-//	______________________________________________________________________________________________________________
+//	___________________________________________________________________________
 //
 //	Icons that can be used within Navigation elements, or within text elements
 //
@@ -174,10 +186,11 @@ abbr {
 //
 
 
-.i, .is {
+.i,
+.is {
 	background-repeat: no-repeat;
 	display: inline-block;
-	margin: 0 0.5%;
+	margin: 0 0.5% 0 0.5%;
 	position: relative;
 	vertical-align: middle;
 }
