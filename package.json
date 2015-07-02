@@ -1,6 +1,6 @@
 {
   "name": "flucss",
-  "description": "Flucss - My little CSS framework",
+  "description": "Flucss - My little Sass framework",
   "version": "0.1.0",
   "author": {
     "name": "Matthew Roach",
@@ -12,6 +12,6 @@
     "grunt-contrib-concat": "~0.1.2",
     "grunt-contrib-cssmin": "~0.4.1",
     "grunt-contrib-watch": "~0.2.0",
-    "grunt-contrib-sass": "~0.3.0"
+    "grunt-contrib-sass": "~0.8.0"
   }
 }
