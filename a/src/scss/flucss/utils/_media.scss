@@ -1,0 +1,22 @@
+
+//
+//		Basic Math Functions
+//	___________________________________________________________________________
+
+
+@mixin media-min( $size ) {
+  @if map-has-key( $mediasizes, $size ) {
+    @media ( min-width: #{map-get($mediasizes, $size)} ) {
+      @content;
+    }
+  }
+}
+
+
+@mixin media-max( $size ) {
+  @if map-has-key( $mediasizes, $size ) {
+    @media ( max-width: #{map-get($mediasizes, $size)} ) {
+      @content;
+    }
+  }
+}

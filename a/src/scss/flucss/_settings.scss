@@ -1,23 +1,31 @@
 
-	// --- My Base Variables --- */
-
-	$baseSize: 1.6;
-	$baseLH: 1.5;
-	$baseFamily: Helvetica, Arial, sans-serif;
-
-
-	// --- The Grid --- */
-	$columnName: 'col';
-	$gridWidth: 1000;
-	$gridNo: 10;
-	$colLeft: 20;
+// My Base Variables
+$baseSize: 1.6;
+$baseLH: 1.5;
+$baseFamily: Helvetica, Arial, sans-serif;
 
 
-	// --- Colors --- */
 
-	$black: rgb(0,0,0);
-	$white: rgb(255,255,255);
+// The Grid
+$columnName: 'col';
+$gridWidth: 1000;
+$gridNo: 10;
+$colLeft: 20;
 
-	$warningColor: rgb(200,0,0);
 
-	$lightGray: rgb(230,230,230);
+
+// Media Queries
+$mediasizes: (
+	mobile: 10em,
+	tablet: 30em,
+	tablet-landscape: 40em
+);
+
+
+
+// Colors
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+$lightGray: rgb(230, 230, 230);
+
+$warningColor: rgb(200, 0, 0);

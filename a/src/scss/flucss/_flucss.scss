@@ -1,19 +1,22 @@
 
-	// --- Load My Base Settings --- */
-	@import "settings"
+// Load My Base Settings
+@import "settings"
 
 
-	// --- Load my mixins --- */
-				, "mixins/mixins"
+// Load my mixins
+			, "utils/mixins"
+			, "utils/functions"
+			, "utils/helpers"
+			, "utils/media"
 
 
-	// --- Import all the SCSS files together in the correct order --- */
-				, "partials/reset"
-				, "partials/basics"
-				, "partials/grid"
-				, "partials/navigation"
-				, "partials/media"
-				, "partials/forms"
-				, "partials/buttons"
-				, "partials/tables"
-				, "partials/content"
+// Import all the SCSS files together in the correct order
+			, "partials/reset"
+			, "partials/basics"
+			, "partials/grid"
+			, "partials/navigation"
+			, "partials/media"
+			, "partials/forms"
+			, "partials/buttons"
+			, "partials/tables"
+			, "partials/content"
