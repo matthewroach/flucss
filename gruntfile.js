@@ -19,14 +19,14 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 	    	},
 	      files: {
-	        'a/css/flu.css': 'a/src/scss/<%= pkg.name %>.scss'
+	        'a/css/flu.css': 'scss/<%= pkg.name %>.scss'
 	      }
 	    }
 	  },
 
 		watch: {
 		  src: {
-		    files: 'a/src/scss/**/*.scss',
+		    files: 'scss/**/*.scss',
 		    tasks: ['sass']
 		  }
 		}
