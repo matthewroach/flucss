@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 	    	},
 	      files: {
-	        'a/css/flu.css': 'scss/<%= pkg.name %>.scss'
+	        'a/css/flu.css': 'flucss.scss'
 	      }
 	    }
 	  },
