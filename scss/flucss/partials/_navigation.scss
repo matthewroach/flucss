@@ -15,12 +15,8 @@
 		display: inline-block;
 	}
 
-}
+	&-vertical li {
+		display: list-item;
+	}
 
-
-
-// Extends .nav -> use <ul class="nav vertical">
-
-.vertical li {
-	display: list-item;
 }
