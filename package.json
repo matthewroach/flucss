@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/matthewroach/flucss.git"
+    "url": "https://github.com/matthewroach/flucss.git"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
