@@ -10,7 +10,11 @@ table {
 	}
 
 	.zebra tbody tr:nth-child(odd) {
-		background: $lightGray;
+		background: $zebraTableOdd-Bg;
+	}
+
+	.zebra tbody tr:nth-child(even) {
+		background: $zebraTableEven-Bg;
 	}
 
 }
