@@ -11,30 +11,28 @@
 @mixin gridBuilder( $colName:$columnName, $left:$colLeft ) {
 
 	$x: ( $gridWidth / $gridNo );
-	$ml: $left / $gridWidth;
+	$marginLeft: $left / $gridWidth;
 
 	@for $i from 1 through $gridNo {
 
 		$w: ( $x * $i / $gridWidth );
 
 		.#{$colName}#{$i} {
-			width: percentage( $w - $ml );
+			width: percentage( $w - $marginLeft );
 		}
 
 	}
 
 	.#{$colName}3rd {
 		$w: ( $gridWidth / 3 / $gridWidth );
-		$l: ( $left * 3 / $gridWidth );
 
-		width: percentage( $w - $ml );
+		width: percentage( $w - $marginLeft );
 	}
 
 	.#{$colName}qr {
 		$w: ( $gridWidth / 4 / $gridWidth );
-		$l: ( $left * 4 / $gridWidth );
 
-		width: percentage( $w - $ml );
+		width: percentage( $w - $marginLeft );
 	}
 
 }
