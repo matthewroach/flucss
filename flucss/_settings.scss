@@ -1,0 +1,37 @@
+
+// My Base Variables
+$baseSize: 1.6 !default;
+$baseLH: 1.5 !default;
+$baseFamily: Helvetica, Arial, sans-serif !default;
+
+
+
+// The Grid
+$columnName: 'col';
+$gridWidth: 1000 !default;
+$gridNo: 10 !default;
+$colLeft: 20 !default;
+
+
+
+// Media Queries
+$mediasizes: (
+	mobile: 10em,
+	tablet: 30em,
+	tablet-landscape: 40em
+);
+
+
+
+// Colors
+$black: rgb(0, 0, 0) !default;
+$white: rgb(255, 255, 255) !default;
+$lightGray: rgb(230, 230, 230) !default;
+
+$warningColor: rgb(200, 0, 0) !default;
+
+$primaryLinkColor: rgb(0, 0, 200) !default;
+
+
+$zebraTableOdd-Bg: $lightGray;
+$zebraTableEven-Bg: $white;

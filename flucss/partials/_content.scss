@@ -1,0 +1,200 @@
+//
+//		Content
+//	___________________________________________________________________________
+//
+//		1- Headings
+//		2- Paragraphs
+//		3- Lists
+//			- ul
+//			- ol
+//			- dl
+//		4- Links
+//		5- Blockquotes
+//		6- Text
+//
+
+
+//	Content Basics
+
+h1, h2, h3, h4, h5, h6, p, li, dl, blockquote, th, td, form {
+	@include fontSize();
+	line-height: 1.2;
+}
+
+
+
+//
+//		1. Headings
+//	___________________________________________________________________________
+
+
+h1,
+.gigawatt {
+	@include fontSize(2.2);
+	font-weight: 900;
+}
+
+h2,
+.megawatt {
+	@include fontSize(2.0);
+}
+
+h3,
+.kilowatt {
+	@include fontSize(1.8);
+	font-weight: 700;
+}
+
+h4,
+.milliwatt {
+	@include fontSize(1.6);
+	font-weight: 700;
+}
+
+h5,
+.microwatt {
+	@include fontSize(1.4);
+	font-weight: 700;
+}
+
+h6,
+.nanowatt {
+	@include fontSize(1.2);
+	font-weight: 700;
+}
+
+.h-header {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin: 0 0 0.5em 0;
+}
+
+
+
+//
+//		2. Paragrpahs
+//	___________________________________________________________________________
+
+
+p {
+	margin: 0 0 0.5em 0;
+}
+
+
+
+//
+//		3. Lists
+//	___________________________________________________________________________
+
+
+ol li {
+	margin: 0 0 0 25px;
+}
+
+.nolistitems li {
+	list-style: none;
+	margin: 0;
+}
+
+.disc li {
+	list-style: disc;
+}
+
+.square li {
+	list-style: square;
+}
+
+.circle li {
+	list-style: circle;
+}
+
+.leadingzero li {
+	list-style: decimal-leading-zero;
+}
+
+.roman li {
+	list-style: lower-roman;
+}
+
+
+
+//
+//		4. Links
+//	___________________________________________________________________________
+
+
+a {
+	color: $primaryLinkColor;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+
+//
+//		5. Blockquotes
+//	___________________________________________________________________________
+
+
+blockquote {
+	margin: 1% 0 2% 5%;
+	padding: 1%;
+	width: 85%;
+
+	cite {
+		display: inline-block;
+		margin: 1% 0 0 0;
+	}
+}
+
+
+
+//
+//	6. Text
+//	___________________________________________________________________________
+
+
+strong {
+	font-weight: bold;
+}
+
+sup,
+sub {
+	@include fontSize(0.8);
+}
+
+.center {
+	text-align: center;
+}
+
+abbr {
+	border-bottom: 1px dotted rgb(50, 50, 50);
+
+	&:hover {
+		cursor: help;
+	}
+
+}
+
+
+
+//
+//		7. Icons
+//	___________________________________________________________________________
+//
+//	Icons that can be used within Navigation elements, or within text elements
+//
+//	They can either be sprites (.is) or just a normal icon (.i)
+//
+
+
+.i,
+.is {
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 0 0.5% 0 0.5%;
+	position: relative;
+	vertical-align: middle;
+}

@@ -1,0 +1,34 @@
+//
+//		Forms
+//	___________________________________________________________________________
+//
+//	Very Basic as each site's forms can be very different, and we would have
+// 	to override styles that would be here and that goes against Flucss.
+//
+
+
+form {
+
+	fieldset {
+		display: inline-block;
+	}
+
+	label {
+		float: left;
+		margin: 0 2% 0 0;
+	}
+
+	.sidelabels label {
+		display: block;
+	}
+
+	.full {
+		display: inline-block;
+		width: 98%;
+	}
+
+	.half {
+		width: 50%;
+	}
+
+}

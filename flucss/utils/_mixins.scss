@@ -1,0 +1,26 @@
+
+//
+//		Border Radius
+//	___________________________________________________________________________
+
+@mixin borderRadius( $w, $x, $y, $z ) {
+
+	-webkit-border-radius: $w $x $y $z;
+	-moz-border-radius: $w $x $y $z;
+	border-radius: $w $x $y $z;
+
+}
+
+
+
+//
+//		Box Shadow
+//	___________________________________________________________________________
+
+@mixin boxShadow( $x, $y, $z, $color ) {
+
+	-webkit-box-shadow: $x $y $z $color;
+	-moz-box-shadow: $x $y $z $color;
+	box-shadow: $x $y $z $color;
+
+}

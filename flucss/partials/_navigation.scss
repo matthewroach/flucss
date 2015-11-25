@@ -1,0 +1,22 @@
+//
+//		Navigation
+//	___________________________________________________________________________
+//
+//		- Default
+//
+
+
+.nav {
+	display: inline-block;
+	list-style: none;
+	width: 100%;
+
+	li {
+		display: inline-block;
+	}
+
+	&-vertical li {
+		display: list-item;
+	}
+
+}
