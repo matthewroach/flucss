@@ -1,54 +1,22 @@
-#################
-## Eclipse
-#################
 
-*.pydevproject
-.project
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
-
-
-############
 ## NODE
-############
-
 node_modules
 
 
-############
 ## SASS
-############
-
 .sass-cache
 
 
-############
-## Windows
-############
-
-# Windows image file caches
+##W Windows
 Thumbs.db
-
-# Folder config file
 Desktop.ini
 
 
-############
 ## MAC
-############
-
-# Mac crap
 .DS_Store
 
+
+## Flucss
 flucss-dev.scss
 a
 index.html
