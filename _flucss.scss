@@ -1,2 +1,22 @@
 
-@import "scss/flucss";
+// Load My Base Settings
+@import "flucss/settings"
+
+
+// Load my mixins
+			, "flucss/utils/mixins"
+			, "flucss/utils/functions"
+			, "flucss/utils/helpers"
+			, "flucss/utils/media"
+
+
+// Import all the SCSS files together in the correct order
+			, "flucss/partials/reset"
+			, "flucss/partials/basics"
+			, "flucss/partials/grid"
+			, "flucss/partials/navigation"
+			, "flucss/partials/media"
+			, "flucss/partials/forms"
+			, "flucss/partials/buttons"
+			, "flucss/partials/tables"
+			, "flucss/partials/content"

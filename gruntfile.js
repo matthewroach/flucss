@@ -4,14 +4,6 @@ module.exports = function(grunt) {
 
 		pkg: grunt.file.readJSON('package.json'),
 
-		cssmin: {
-		  compress: {
-		    files: {
-		      "a/css/min.flu.css": ["a/css/flu.css"]
-		    }
-		  }
-		},
-
 	  sass: {
 	    dist: {
 	    	options: {
@@ -26,17 +18,16 @@ module.exports = function(grunt) {
 
 		watch: {
 		  src: {
-		    files: 'scss/**/*.scss',
+		    files: '**/*.scss',
 		    tasks: ['sass']
 		  }
 		}
 
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass', 'cssmin']);
+	grunt.registerTask('default', ['sass']);
 
 };
