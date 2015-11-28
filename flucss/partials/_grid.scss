@@ -38,6 +38,10 @@
 			margin-left: 0;
 		}
 	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 .colcenter {
