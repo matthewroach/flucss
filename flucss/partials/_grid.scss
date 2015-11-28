@@ -35,7 +35,7 @@
 		margin: 0 0 0 percentage( $colLeft / $gridWidth );
 
 		&:first-child {
-			margin-left: 0;
+			margin-left: percentage( $colLeft / $gridWidth / 2 );
 		}
 	}
 

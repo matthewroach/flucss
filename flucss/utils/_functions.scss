@@ -17,23 +17,28 @@
 
 		$w: ( $x * $i / $gridWidth );
 
-		.#{$colName}#{$i} {
-			width: percentage( $w );
+		.#{$colName}-#{$i} {
+			width: percentage( $w - $marginLeft );
 		}
 
 	}
 
-	.#{$colName}3rd {
+	.#{$colName}-3rd {
 		$w: ( $gridWidth / 3 / $gridWidth );
 
 		width: percentage( $w - $marginLeft );
 	}
 
-	.#{$colName}qr {
+	.#{$colName}-qr {
 		$w: ( $gridWidth / 4 / $gridWidth );
 
 		width: percentage( $w - $marginLeft );
 	}
+
+	.#{$colName}-full {
+		width: percentage( 1 - $marginLeft);
+	}
+
 
 }
 
