@@ -7,10 +7,16 @@ $baseFamily: Helvetica, Arial, sans-serif !default;
 
 
 // The Grid
+$enableGrid: true;
+
 $columnName: 'col';
 $gridWidth: 1000 !default;
 $gridNo: 10 !default;
 $colLeft: 20 !default;
+
+// Default Grid Padding, enable with gridPadding
+$gridPadding: true;
+$padding: 1% 1% 1% 1%;
 
 
 

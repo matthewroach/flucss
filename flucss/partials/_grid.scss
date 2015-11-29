@@ -16,38 +16,44 @@
 // 	if you add them all up!
 //
 
+@if global-variable-exists(enableGrid) and $enableGrid {
 
-.container {
-	margin: 0 auto;
-	padding: 0 ceil( percentage( $colLeft / $gridWidth / $gridNo ) );
-	text-align: left;
-	width: 100%;
-	max-width: #{$gridWidth}px;
-}
+	.container {
+		margin: 0 auto;
+		padding: 0 ceil( percentage( $colLeft / $gridWidth / $gridNo ) );
+		text-align: left;
+		width: 100%;
+		max-width: #{$gridWidth}px;
+	}
 
-.row {
-	display: inline-block;
-	margin: 0 0 1.5% 0;
-	width: 100%;
+	.row {
+		display: inline-block;
+		margin: 0 0 1.5% 0;
+		width: 100%;
 
-	& > [class^=#{$columnName}] {
-		float: left;
-		margin: 0 0 0 percentage( $colLeft / $gridWidth );
+		& > [class^=#{$columnName}] {
+			float: left;
+			margin: 0 0 0 percentage( $colLeft / $gridWidth );
 
-		&:first-child {
-			margin-left: percentage( $colLeft / $gridWidth / 2 );
+			@if global-variable-exists(gridPadding) and $gridPadding {
+				padding: $padding;
+			}
+
+			&:first-child {
+				margin-left: percentage( $colLeft / $gridWidth / 2 );
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
 		}
 	}
 
-	&:last-of-type {
-		margin-bottom: 0;
+	.colcenter {
+		margin: 0 auto;
 	}
+
+
+
+	@include gridBuilder;
 }
-
-.colcenter {
-	margin: 0 auto;
-}
-
-
-
-@include gridBuilder;
