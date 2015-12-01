@@ -19,6 +19,12 @@ $gridPadding: true;
 $padding: 1% 1% 1% 1%;
 
 
+// Buttons
+$btn-radius: true !default;
+$btn-font-size: 1.3;
+$btn-border-radius: 10%;
+
+
 
 // Media Queries
 $mediasizes: (
@@ -32,6 +38,7 @@ $mediasizes: (
 // Colors
 $black: rgb(0, 0, 0) !default;
 $white: rgb(255, 255, 255) !default;
+$gray: rgb(210, 210, 210) !default;
 $lightGray: rgb(230, 230, 230) !default;
 
 $warningColor: rgb(200, 0, 0) !default;
@@ -39,5 +46,6 @@ $warningColor: rgb(200, 0, 0) !default;
 $primaryLinkColor: rgb(0, 0, 200) !default;
 
 
+// Table Colors
 $zebraTableOdd-Bg: $lightGray;
 $zebraTableEven-Bg: $white;

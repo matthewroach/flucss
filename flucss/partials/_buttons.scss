@@ -1,3 +1,32 @@
 //
 //		Buttons
 //	___________________________________________________________________________
+
+
+button,
+.button,
+input[type='submit'] {
+	background: $lightGray;
+	border: 1px solid $gray;
+	color: $black;
+	display: inline-block;
+	line-height: $baseLH;
+	margin: 1% 0 1% 0;
+	padding: 5px 10px 5px 10px;
+
+	@include fontSize($btn-font-size);
+
+	@if $btn-radius {
+		border-radius: $btn-border-radius;
+	}
+
+	&:hover {
+		background: $white;
+		cursor: pointer;
+	}
+}
+
+
+a.button {
+	text-decoration: none;
+}
