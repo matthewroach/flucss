@@ -39,6 +39,9 @@
 		width: percentage( 1 - $marginLeft);
 	}
 
+	.#{$colName}-100 {
+		width: 100%;
+	}
 
 }
 
