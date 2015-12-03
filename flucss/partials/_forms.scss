@@ -18,17 +18,24 @@ form {
 		margin: 0 2% 0 0;
 	}
 
-	.sidelabels label {
-		display: block;
+	.toplabels label {
+		width: 100%;
 	}
 
-	.full {
-		display: inline-block;
-		width: 98%;
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		line-height: $baseLH;
+		padding: 1% 1% 1% 1%;
 	}
 
-	.half {
-		width: 50%;
+
+	input[type="submit"] {
+		-webkit-appearance: none;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 }
