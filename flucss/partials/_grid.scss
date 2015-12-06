@@ -1,21 +1,32 @@
-//
-//		The Grid
-//	___________________________________________________________________________
-//
-//	Grid is built using the gridBuilder mixin, the width and columns are setting
-// 	in settings.scss
-//
-//
-//	Basic Markup :::
-//		<div class="row">
-//			<div class="col#"> </div>
-//			<div class="col#"> </div>
-//		</div>
-//
-//	The col# inside a row div can not be more than the numbeer your set $girdNo to
-// 	if you add them all up!
-//
+/***
+ * Grid:
+ */
 
+/**
+ * Grid is built using the gridBuilder mixin, the width and columns are set
+ * in settings.scss
+ *
+ * The col-# inside a row div can not be more than the $gridNo you have in your settings
+ *
+ *     @example
+ *     div.row
+ *       div.col-1 Col 1
+ *       div.col-2 Col 2
+ *       div.col-3 Col 3
+ *       div.col-4 Col 4
+ *
+ *     div.row
+ *       div.col-5 Col 5
+ *       div.col-5 Col 5
+ *
+ *     div.row
+ *       div.col-6 Col 6
+ *       div.col-4 Col 4
+ *
+ *     div.row
+ *       div.col-7 Col 7
+ *       div.col-3 Col 3
+ */
 @if global-variable-exists(enableGrid) and $enableGrid {
 
 	.container {
@@ -56,4 +67,5 @@
 
 
 	@include gridBuilder;
+
 }

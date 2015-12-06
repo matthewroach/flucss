@@ -1,11 +1,36 @@
-//
-//		Buttons
-//	___________________________________________________________________________
+/***
+ * Buttons:
+ */
 
+/**
+ * Button:
+ * `button` - Button stylings for default sbittons on the sitee
+ *
+ *     @example
+ *     button Standard button
+ */
 
+/**
+ * Button Link:
+ * `a.button` - Need to style an a link the same as a button, just add button to
+ * to the a link taf
+ *
+ *     @example
+ *     <a href="http://flucss.com" class="button">flucss.com</a>
+ */
+
+/**
+ * Form Buttons Button:
+ * `input[type="submit"]` - Submit and Reset form buttons
+ * Live it, love it.
+ *
+ *     @example
+ *     <input type="submit" value="Submit" />
+ */
 button,
 .button,
-input[type='submit'] {
+input[type='submit'],
+input[type='reset'] {
 	background: $lightGray;
 	border: 1px solid $gray;
 	color: $black;
