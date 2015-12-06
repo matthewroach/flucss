@@ -1,22 +1,42 @@
-//
-//		Navigation
-//	___________________________________________________________________________
-//
-//		- Default
-//
+/***
+ * Navigation:
+ */
 
 
+/**
+ * Nav:
+ * `ul.nav` - Simple navigation styles
+ *
+ *     @example
+ *     ul.nav
+ *       li <a href="">Home</a>
+ *       li <a href="">About</a>
+ *
+ */
+ /**
+ * Nav:
+ * `ul.nav-vertical` - Vertical Navigation
+ *
+ *     @example
+ *     ul.nav-vertical
+ *       li <a href="">Home</a>
+ *       li <a href="">About</a>
+ *
+ */
 .nav {
 	display: inline-block;
-	list-style: none;
 	width: 100%;
 
 	li {
 		display: inline-block;
+		list-style: none;
+		margin: 0;
 	}
 
 	&-vertical li {
 		display: list-item;
+		list-style: none;
+		margin: 0;
 	}
 
 }

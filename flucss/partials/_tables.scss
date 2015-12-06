@@ -1,19 +1,85 @@
-//
-//		Tables
-//	___________________________________________________________________________
+/***
+ * Tables:
+ */
 
+/**
+ * Table:
+ * `table` - Tables get a bad name in web development, but you can not get
+ * away from them for the good tabular data outputs
+ *
+ *     @example
+ *	<table>
+ *    <thead>
+ *			<tr>
+ *    		<th>Table Header</th>
+ *    		<th>Table Header</th>
+ *  		</tr>
+ *  	</thead>
+ *		<tbody>
+ *	    <tr>
+ *      	<td>Cell</td>
+ *    	  <td>Cell</td>
+ *  	  </tr>
+ * 	   <tr>
+ *      	<td>Cell</td>
+ *      	<td>Cell</td>
+ *    	</tr>
+ *  	</tbody>
+ *	</table>
+ */
+
+
+/**
+ * Zebra Table:
+ * `table.zebra` - What's better than a plain table, a zebra stripe table
+ *
+ *     @example
+ * <table class="zebra">
+ *    <thead>
+ *      <tr>
+ *        <th>Table Header</th>
+ *        <th>Table Header</th>
+ *      </tr>
+ *    </thead>
+ *    <tbody>
+ *      <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *     <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *     <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *     <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *    </tbody>
+ *  </table>
+ */
 table {
 	width: 100%;
 
-	th {
-		font-weight: bold;
+	th,
+	td {
+		border: 1px solid $tableBorderColor;
+		padding: 1% 1% 1% 1%;
 	}
 
-	.zebra tbody tr:nth-child(odd) {
+  th {
+    border-bottom: 2px solid $tableHeaderBorderColor;
+    font-weight: bold;
+  }
+
+	&.zebra tbody tr:nth-child(odd) {
 		background: $zebraTableOdd-Bg;
 	}
 
-	.zebra tbody tr:nth-child(even) {
+	&.zebra tbody tr:nth-child(even) {
 		background: $zebraTableEven-Bg;
 	}
 
