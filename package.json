@@ -12,7 +12,8 @@
     "url": "https://github.com/matthewroach/flucss.git"
   },
   "scripts": {
-  	"sassdocs": "styledown flucss/**/*.scss config.md > index.html"
+  	"sass": "sass flu.scss:a/css/flu.css",
+  	"sass-docs": "styledown flucss/**/*.scss config.md > index.html"
 	},
   "devDependencies": {
     "gulp": "^3.9.0",
