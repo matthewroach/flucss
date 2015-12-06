@@ -51,6 +51,34 @@ body {
   float: right;
   margin-right: 0.5%; }
 
+/***
+ * Grid:
+ */
+/**
+ * Grid is built using the gridBuilder mixin, the width and columns are set
+ * in settings.scss
+ *
+ * The col-# inside a row div can not be more than the $gridNo you have in your settings
+ *
+ *     @example
+ *     div.row
+ *       div.col-1 Col 1
+ *       div.col-2 Col 2
+ *       div.col-3 Col 3
+ *       div.col-4 Col 4
+ *
+ *     div.row
+ *       div.col-5 Col 5
+ *       div.col-5 Col 5
+ *
+ *     div.row
+ *       div.col-6 Col 6
+ *       div.col-4 Col 4
+ *
+ *     div.row
+ *       div.col-7 Col 7
+ *       div.col-3 Col 3
+ */
 .container {
   margin: 0 auto;
   padding: 0 1%;
@@ -116,14 +144,40 @@ body {
 .col-100 {
   width: 100%; }
 
+/***
+ * Navigation:
+ */
+/**
+ * Nav:
+ * `ul.nav` - Simple navigation styles
+ *
+ *     @example
+ *     ul.nav
+ *       li <a href="">Home</a>
+ *       li <a href="">About</a>
+ *
+ */
+/**
+ * Nav:
+ * `ul.nav-vertical` - Vertical Navigation
+ *
+ *     @example
+ *     ul.nav-vertical
+ *       li <a href="">Home</a>
+ *       li <a href="">About</a>
+ *
+ */
 .nav {
   display: inline-block;
-  list-style: none;
   width: 100%; }
   .nav li {
-    display: inline-block; }
+    display: inline-block;
+    list-style: none;
+    margin: 0; }
   .nav-vertical li {
-    display: list-item; }
+    display: list-item;
+    list-style: none;
+    margin: 0; }
 
 img {
   color: #c80000;
@@ -159,9 +213,36 @@ form input[type="submit"] {
   form input[type="submit"]:hover {
     cursor: pointer; }
 
+/***
+ * Buttons:
+ */
+/**
+ * Button:
+ * `button` - Button stylings for default sbittons on the sitee
+ *
+ *     @example
+ *     button Standard button
+ */
+/**
+ * Button Link:
+ * `a.button` - Need to style an a link the same as a button, just add button to
+ * to the a link taf
+ *
+ *     @example
+ *     <a href="http://flucss.com" class="button">flucss.com</a>
+ */
+/**
+ * Form Buttons Button:
+ * `input[type="submit"]` - Submit and Reset form buttons
+ * Live it, love it.
+ *
+ *     @example
+ *     <input type="submit" value="Submit" />
+ */
 button,
 .button,
-input[type='submit'] {
+input[type='submit'],
+input[type='reset'] {
   background: #eaeaea;
   border: 1px solid #d2d2d2;
   color: black;
@@ -174,20 +255,86 @@ input[type='submit'] {
   border-radius: 5px; }
   button:hover,
   .button:hover,
-  input[type='submit']:hover {
+  input[type='submit']:hover,
+  input[type='reset']:hover {
     background: white;
     cursor: pointer; }
 
 a.button {
   text-decoration: none; }
 
+/***
+ * Tables:
+ */
+/**
+ * Table:
+ * `table` - Tables get a bad name in web development, but you can not get
+ * away from them for the good tabular data outputs
+ *
+ *     @example
+ *	<table>
+ *    <thead>
+ *			<tr>
+ *    		<th>Table Header</th>
+ *    		<th>Table Header</th>
+ *  		</tr>
+ *  	</thead>
+ *		<tbody>
+ *	    <tr>
+ *      	<td>Cell</td>
+ *    	  <td>Cell</td>
+ *  	  </tr>
+ * 	   <tr>
+ *      	<td>Cell</td>
+ *      	<td>Cell</td>
+ *    	</tr>
+ *  	</tbody>
+ *	</table>
+ */
+/**
+ * Zebra Table:
+ * `table.zebra` - What's better than a plain table, a zebra stripe table
+ *
+ *     @example
+ * <table class="zebra">
+ *    <thead>
+ *      <tr>
+ *        <th>Table Header</th>
+ *        <th>Table Header</th>
+ *      </tr>
+ *    </thead>
+ *    <tbody>
+ *      <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *     <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *     <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *     <tr>
+ *        <td>Cell</td>
+ *        <td>Cell</td>
+ *      </tr>
+ *    </tbody>
+ *  </table>
+ */
 table {
   width: 100%; }
+  table th,
+  table td {
+    border: 1px solid #eaeaea;
+    padding: 1% 1% 1% 1%; }
   table th {
+    border-bottom: 2px solid #d2d2d2;
     font-weight: bold; }
-  table .zebra tbody tr:nth-child(odd) {
+  table.zebra tbody tr:nth-child(odd) {
     background: #eaeaea; }
-  table .zebra tbody tr:nth-child(even) {
+  table.zebra tbody tr:nth-child(even) {
     background: white; }
 
 .t-1 {
@@ -232,39 +379,93 @@ table {
 .t-100 {
   width: 100%; }
 
+/***
+ * Headings:
+ */
+/**
+ * Heading 1:
+ * `h1` - The main heading for all pages
+ *
+ *     @example
+ *     h1 A huge heading
+ *     p.h1 A p with .h1 class
+ *
+ */
+/**
+ * Heading 2:
+ * `h2`
+ *
+ *     @example
+ *     h2 Heading 2
+ *     p.h2 A p with .h2 class
+ *
+ */
+/**
+ * Heading 3:
+ * `h3`
+ *
+ *     @example
+ *     h3 Heading 3
+ *     p.h3 A p with .h3 class
+ *
+ */
+/**
+ * Heading 4:
+ * `h4`
+ *
+ *     @example
+ *     h4 Heading 4
+ *     p.h4 A p with .h4 class
+ */
+/**
+ * Heading 5:
+ * `h5`
+ *
+ *     @example
+ *     h5 Heading 5
+ *     p.h5 A p with .h5 class
+ */
+/**
+ * Heading 6:
+ * `h6`
+ *
+ *     @example
+ *     h6 Heading 6
+ *     p.h6 A p with .h6 class
+ */
 h1,
-.gigawatt {
-  font-size: 22px;
-  font-size: 2.2rem;
+.h1 {
+  font-size: 28px;
+  font-size: 2.8rem;
   font-weight: 900; }
 
 h2,
-.megawatt {
-  font-size: 20px;
-  font-size: 2rem; }
+.h2 {
+  font-size: 24px;
+  font-size: 2.4rem; }
 
 h3,
-.kilowatt {
+.h3 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 700; }
+
+h4,
+.h4 {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 700; }
 
-h4,
-.milliwatt {
+h5,
+.h5 {
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: 700; }
 
-h5,
-.microwatt {
+h6,
+.h6 {
   font-size: 14px;
   font-size: 1.4rem;
-  font-weight: 700; }
-
-h6,
-.nanowatt {
-  font-size: 12px;
-  font-size: 1.2rem;
   font-weight: 700; }
 
 .h-header {
@@ -272,59 +473,181 @@ h6,
   border-bottom-width: 1px;
   margin: 0 0 0.5em 0; }
 
+/***
+ * Content:
+ */
+/**
+ * Paragraph:
+ * `p` - The "paragraph" tag, more than likely the most used tag on a page
+ *
+ *     @example
+ *     p Rather than just a big block of lorem ipsum, I have wrote a whole lot of nothing, that makes no sense what so ever.
+ */
 p {
   margin: 0 0 0.5em 0; }
 
-ol li {
-  margin: 0 0 0 25px; }
+/**
+ * Center Text:
+ * `.center`
+ *
+ *     @example
+ *     p.center Want to just center some text, use the center class
+ */
+.center {
+  text-align: center; }
 
-.nolistitems li {
-  list-style: none;
-  margin: 0; }
-
-.disc li {
-  list-style: disc; }
-
-.square li {
-  list-style: square; }
-
-.circle li {
-  list-style: circle; }
-
-.leadingzero li {
-  list-style: decimal-leading-zero; }
-
-.roman li {
-  list-style: lower-roman; }
-
+/**
+ * Link:
+ * `a` - The a link
+ *
+ *     @example
+ *     <a href="http://flucss.com">flucss.com</a>
+ */
 a {
   color: #0000c8; }
   a:hover {
     cursor: pointer; }
 
+/**
+ * Blockquote:
+ * `blockquote` - Blockquote
+ *
+ *     @example
+ *     <blockquote>
+ *       when this baby hit's 88mph, you're going see some serious...
+ *     </blockquote>
+ */
 blockquote {
   margin: 1% 0 2% 5%;
-  padding: 1%;
+  padding: 1% 1% 1% 1%;
   width: 85%; }
-  blockquote cite {
-    display: inline-block;
-    margin: 1% 0 0 0; }
 
+/**
+ * Strong:
+ * `strong` - Pretty much means makes something bold
+ *
+ *     @example
+ *     p I am
+ *       strong strong
+ */
 strong {
   font-weight: bold; }
 
+/**
+ * sup:
+ * `sup` - Sup(pper)
+ *
+ *     @example
+ *     p This is
+ *			sup Supper
+ */
+/**
+ * sub:
+ * `sub` - sub(er)
+ *
+ *     @example
+ *     p This is
+ *			sub Sub
+ */
 sup,
 sub {
   font-size: 8px;
   font-size: 0.8rem; }
 
-.center {
-  text-align: center; }
-
+/**
+ * abbr:
+ * `abbr` - abbr
+ *
+ *     @example
+ *     p This is an
+ *			abbr abbrivation
+ */
 abbr {
   border-bottom: 1px dotted #323232; }
   abbr:hover {
     cursor: help; }
+
+/***
+ * Lists:
+ */
+/**
+ * Unordered Lists:
+ * `ul` - Unordered List
+ *
+ *     @example
+ *     ul
+ * 			li A simple list
+ */
+ul li,
+ol li {
+  margin: 0 0 0 25px; }
+
+/**
+ * No style:
+ * `ul.nolistitem` - List's with no bullet style
+ *
+ *     @example
+ *     ul.nolistitem
+ * 			li A simple list
+ */
+.nolistitem li {
+  list-style: none;
+  margin: 0; }
+
+/**
+ * Dics:
+ * `ul.disc` - Dics list bullet
+ *
+ *     @example
+ *     ul.didc
+ * 			li A simple list
+ */
+.disc li {
+  list-style: disc; }
+
+/**
+ * Square:
+ * `ul.square` - Square list bullet
+ *
+ *     @example
+ *     ul.square
+ * 			li A simple list
+ */
+.square li {
+  list-style: square; }
+
+/**
+ * Circle:
+ * `ul.circle` - Cirle list bullet
+ *
+ *     @example
+ *     ul.circle
+ * 			li A simple list
+ */
+.circle li {
+  list-style: circle; }
+
+/**
+ * Leading Zero:
+ * `ul.leadingzero` - Decimal with a leading zero
+ *
+ *     @example
+ *     ul
+ * 			li A simple list
+ */
+.leadingzero li {
+  list-style: decimal-leading-zero; }
+
+/**
+ * Roman:
+ * `ul.roman` - Going back in time
+ *
+ *     @example
+ *     ul.roman
+ * 			li A simple list
+ */
+.roman li {
+  list-style: lower-roman; }
 
 .i,
 .is {
