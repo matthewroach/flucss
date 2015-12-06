@@ -1,0 +1,12 @@
+
+
+@import "flucss";
+
+
+.row > [class^=col] {
+	background: #e6e6e6;
+
+	@include media-max( tablet ) {
+		/*background: red;*/
+	}
+}
