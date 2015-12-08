@@ -18,3 +18,5 @@ Desktop.ini
 
 ## Flucss
 flucss-dev.scss
+
+*.map
